@@ -1,0 +1,65 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <a href="{:U('add_guest')}" class="btn btn-fw primary m-b">新增</a>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="box">
+        <form action="{:U('del_guest')}" method="post">
+          <table class="table table-striped b-t">
+            <thead>
+            <tr>
+              <th></th>
+              <th>表名</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <volist name="data" id="data">
+              <tr>
+                <td>
+                  <label class="md-check">
+                    <input type="checkbox" class="delete-item" name="delete[{$data.id}]"><i class="primary"></i>
+                  </label>
+                </td>
+                <td>{$data.title}</td>
+                <td>
+                  <switch name="data.category">
+                    <case value="0">无</case>
+                    <case value="1">大师论坛</case>
+                    <case value="2">专业论坛</case>
+                    <case value="3">品牌论坛</case>
+                  </switch>
+                </td>
+                <td>{$data.year}</td>
+                <td>{$data.time|date='Y-m-d H:i:s',###}</td>
+                <td>{$data.rank}</td>
+                <td><a href="{:U('edit_guest',array('id' => $data['id']))}">编辑</a> <a href="{:U('del_guest',array('id'=>$data['id']))}" class="text-danger" onclick="return confirm('确认要删除吗，删除后无法恢复？')">删除</a></td>
+              </tr>
+            </volist>
+            </tbody>
+          </table>
+        </form>
+      </div>
+      <div class="pagenavi">
+        {$pagenavi}
+      </div>
+    </div>
+  </div>
+</block>
+
+<block name="footer_common">
+  <script>
+    $("#checkAll").click(function(){
+      if($(this).prop('checked')){
+        $(".delete-item").prop("checked",true);
+      }else{
+        $(".delete-item").prop("checked",false);
+      }
+    });
+  </script>
+</block>

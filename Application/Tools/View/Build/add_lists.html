@@ -1,0 +1,162 @@
+<extend name="Base/common"/>
+
+<block name="header_common">
+  <!-- wangEditor -->
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/libs/js/wangEditor/css/wangEditor.css">
+</block>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-divider m-0"></div>
+        <div class="box-body">
+          <form role="form" class="validate" action="__ACTION__" method="post">
+            <div class="form-group">
+              <label>姓名</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>头衔</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="position" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>分类</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <select name="category" class="form-control">
+                    <option value="0">无</option>
+                    <option value="1">大师论坛</option>
+                    <option value="2">专业论坛</option>
+                    <option value="3">品牌论坛</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>年份</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <select name="year" class="form-control">
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic">
+                    <ul>
+                      <li class="upload-pic-wrap">
+                        <i class="fa fa-plus"></i>
+                        <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="intro">内容</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <textarea id="intro" class="form-control" style="height:500px;" name="content" >{$data.content}</textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>排序</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="rank" class="form-control" value="99">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn primary m-b">提交</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</block>
+
+<block name="footer_common">
+  <!-- qy-upload -->
+  <script src="__PUBLIC__/admin/libs/jquery/jquery-form/jquery.form.min.js"></script>
+  <script src="__PUBLIC__/admin/scripts/qy-upload.js"></script>
+  <script type="text/javascript">
+    $('.qy-upload').qy_upload("__MODULE__/upload/","pic",0);
+  </script>
+
+  <!-- wangEditor -->
+  <script type="text/javascript" src="__PUBLIC__/admin/libs/js/wangEditor/js/wangEditor.js"></script>
+  <script type="text/javascript">
+    // 阻止输出log
+    wangEditor.config.printLog = false;
+    var editor = new wangEditor('intro');
+
+    // 自定义菜单
+    editor.config.menus = [
+      'source',
+      '|',
+      'indent',
+      'bold',
+      'underline',
+      'italic',
+      'strikethrough',
+      'eraser',
+      'forecolor',
+      'bgcolor',
+      '|',
+      'quote',
+      'fontfamily',
+      'fontsize',
+      'head',
+      'unorderlist',
+      'orderlist',
+      'alignleft',
+      'aligncenter',
+      'alignright',
+      '|',
+      'link',
+      'unlink',
+      'table',
+      'emotion',
+      '|',
+      'img',
+      'video',
+      'location',
+      'insertcode',
+      '|',
+      'undo',
+      'redo',
+      'fullscreen'
+    ];
+
+    //吸顶距离
+    editor.config.menuFixed = 56;
+
+    // 上传图片
+    editor.config.uploadImgUrl = '__MODULE__/upload/wangeditor/';
+
+    editor.create();
+  </script>
+</block>
