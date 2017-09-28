@@ -1,0 +1,267 @@
+<nav class="scroll nav-light">
+
+    <ul class="nav" ui-nav>
+      <li class="nav-header hidden-folded">
+        <small class="text-muted">内容</small>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Forum">class="active"</eq>>
+        <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+          <span class="nav-text">论坛</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Forum/index')}">
+              <span class="nav-text">论坛介绍</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Forum/partner')}">
+              <span class="nav-text">合作伙伴</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Forum/guest')}">
+              <span class="nav-text">嘉宾</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Forum/calendar')}">
+              <span class="nav-text">日程</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Forum/review')}">
+              <span class="nav-text">论坛回顾</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Expo">class="active"</eq>>
+        <a>
+            <span class="nav-caret">
+              <i class="fa fa-caret-down"></i>
+            </span>
+          <span class="nav-icon">
+              <i class="material-icons">&#xe8f0;
+                <span ui-include="'__PUBLIC__/admin/assets/images/i_2.svg'"></span>
+              </i>
+            </span>
+          <span class="nav-text">展览</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Expo/index')}">
+              <span class="nav-text">展览介绍</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Forum/partner')}">
+              <span class="nav-text">合作伙伴</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Expo/brand')}">
+              <span class="nav-text">品牌</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Expo/review')}">
+              <span class="nav-text">展览回顾</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Media">class="active"</eq>>
+        <a>
+              <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <span class="nav-icon">
+            <i class="material-icons">&#xe8d2;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+            </i>
+          </span>
+          <span class="nav-text">媒体</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Media/index')}">
+              <span class="nav-text">媒体视觉手册</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Exhibitor/download',array('category' => 1))}">
+              <span class="nav-text">媒体下载</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Forum/partner')}">
+              <span class="nav-text">合作伙伴</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Media/press')}">
+              <span class="nav-text">新闻通稿</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Media/picture')}">
+              <span class="nav-text">展会图集</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Media/video',array('category' => 1))}">
+              <span class="nav-text">展会视频</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Media/report')}">
+              <span class="nav-text">媒体报道</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Event">class="active"</eq>>
+        <a>
+                <span class="nav-caret">
+              <i class="fa fa-caret-down"></i>
+            </span>
+          <span class="nav-icon">
+              <i class="material-icons">&#xe8d2;
+                <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+              </i>
+            </span>
+          <span class="nav-text">活动</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Event/subject')}">
+              <span class="nav-text">主题活动</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Event/event')}">
+              <span class="nav-text">品牌活动</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Viewer">class="active"</eq>>
+      <a>
+                <span class="nav-caret">
+              <i class="fa fa-caret-down"></i>
+            </span>
+        <span class="nav-icon">
+              <i class="material-icons">&#xe8d2;
+                <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+              </i>
+            </span>
+        <span class="nav-text">观众</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="{:U('Viewer/index')}">
+            <span class="nav-text">观众</span>
+          </a>
+        </li>
+        <li>
+          <a href="{:U('Viewer/ticket')}">
+            <span class="nav-text">购票信息</span>
+          </a>
+        </li>
+        <li>
+          <a href="{:U('Viewer/traffic')}">
+            <span class="nav-text">交通推荐</span>
+          </a>
+        </li>
+      </ul>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Exhibitor">class="active"</eq> <eq name="Think.CONTROLLER_NAME" value="Media"><eq name="Think.ACTION_NAME" value="video">class="active"</eq></eq>>
+        <a>
+                  <span class="nav-caret">
+                <i class="fa fa-caret-down"></i>
+              </span>
+          <span class="nav-icon">
+                <i class="material-icons">&#xe8d2;
+                  <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+                </i>
+              </span>
+          <span class="nav-text">展商</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Exhibitor/download',array('category' => 2))}">
+              <span class="nav-text">资料下载</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Media/video',array('category' => 2))}">
+              <span class="nav-text">宣传片</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Exhibitor/index')}">
+              <span class="nav-text">参展申请</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Exhibitor/booth')}">
+              <span class="nav-text">展位销售</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+
+      <li <eq name="Think.CONTROLLER_NAME" value="About">class="active"</eq> <eq name="Think.CONTROLLER_NAME" value="Media"><eq name="Think.ACTION_NAME" value="video">class="active"</eq></eq>>
+        <a>
+                    <span class="nav-caret">
+                  <i class="fa fa-caret-down"></i>
+                </span>
+          <span class="nav-icon">
+                  <i class="material-icons">&#xe8d2;
+                    <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+                  </i>
+                </span>
+          <span class="nav-text">关于ADM</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('About/index')}">
+              <span class="nav-text">关于ADM</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('About/news')}">
+              <span class="nav-text">新闻资讯</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('About/organization')}">
+              <span class="nav-text">ADM组织</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('About/contact')}">
+              <span class="nav-text">ADM联络</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+</nav>
